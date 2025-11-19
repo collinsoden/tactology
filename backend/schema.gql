@@ -1,0 +1,55 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type SubDepartment {
+  id: ID!
+  name: String!
+}
+
+type Department {
+  id: ID!
+  name: String!
+  subDepartments: [SubDepartment!]
+}
+
+type DepartmentMeta {
+  total: Int!
+  page: Int!
+  limit: Int!
+  totalPages: Int!
+}
+
+type DepartmentPagination {
+  items: [Department!]!
+  meta: DepartmentMeta!
+}
+
+type Query {
+  getDepartments(pagination: PaginationInput): DepartmentPagination!
+}
+
+input PaginationInput {
+  page: Int! = 1
+  limit: Int! = 10
+}
+
+type Mutation {
+  createDepartment(input: CreateDepartmentInput!): Department!
+  updateDepartment(input: UpdateDepartmentInput!): Department!
+  deleteDepartment(id: Int!): Boolean!
+}
+
+input CreateDepartmentInput {
+  name: String!
+  subDepartments: [CreateSubDepartmentInput!]
+}
+
+input CreateSubDepartmentInput {
+  name: String!
+}
+
+input UpdateDepartmentInput {
+  id: ID!
+  name: String!
+}
