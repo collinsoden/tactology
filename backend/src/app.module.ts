@@ -8,6 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { DepartmentsModule } from './departments/departments.module';
+import { HealthModule } from './health/health.module';
 import { User } from './users/user.entity';
 import { Department } from './departments/department.entity';
 import { SubDepartment } from './departments/sub-department.entity';
@@ -33,6 +34,7 @@ import { UsersService } from './users/users.service';
     AuthModule,
     UsersModule,
     DepartmentsModule,
+    HealthModule,
   ],
 })
 export class AppModule implements OnModuleInit {
