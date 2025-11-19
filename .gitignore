@@ -8,3 +8,7 @@
 
 # Build output
 */dist
+
+# Docker files
+*.log
+docker-compose.dev.yml
