@@ -14,7 +14,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     restart: always
     command: npm run start:dev # !!!Only for development
     env_file:
@@ -28,7 +30,9 @@ services:
       - /app/node_modules
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     restart: always
     command: npm run dev # !!!Only for development
     environment:
