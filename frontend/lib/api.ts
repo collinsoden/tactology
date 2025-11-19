@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch';
 
 const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+  process.env.NEXT_PUBLIC_API_URL || 'https://departments-backend-cm26.onrender.com';
 
 export async function login(username: string, password: string) {
   const res = await fetch(`${API_URL}/auth/login`, {
