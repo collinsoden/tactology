@@ -138,7 +138,7 @@ export default function DepartmentsPage() {
           deleteDepartment(id: $id)
         }
       `,
-        { id },
+        { id: Number(id) },
         token,
       );
       await loadDepartments(page);
