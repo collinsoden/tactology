@@ -87,7 +87,6 @@ export default function DepartmentsPage() {
     if (token) {
       loadDepartments(1);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   const handleCreate = async (e: FormEvent) => {

@@ -21,7 +21,7 @@ Full-stack setup with:
 
 ## 1. Running locally
 
-### Backend
+### Backend only
 
 ```bash
 cd backend
@@ -145,7 +145,19 @@ Frontend runs on `http://localhost:3000`.
 - Log in with `admin` / `password`
 - You will be redirected to `/departments` to manage data.
 
-## 2. Deploying to Render
+
+### Running on docker
+- Set up env variables
+```bash
+cd backend
+cp .env.example .env
+```
+- Build and start app within docker
+```bash
+docker compose up --build
+```
+- Frontend runs on `http://localhost:3000`,
+- Backend ruuns on `http://localhost:4000`.
 
 ### Backend (NestJS)
 
@@ -161,7 +173,7 @@ Frontend runs on `http://localhost:3000`.
 
 - Deploy to Vercel or Render.
 - Environment variable:
-  - `NEXT_PUBLIC_API_URL` = your backend public URL.
+  - `NEXT_PUBLIC_API_URL` = backend public URL.
 
 ## Notes
 

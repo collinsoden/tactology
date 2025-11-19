@@ -1,4 +1,10 @@
+# Environment files
 *.env
+
+# Dependency directories
 */node_modules
 */*.next
 .DS_Store
+
+# Build output
+*/dist
